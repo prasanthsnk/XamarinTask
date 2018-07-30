@@ -21,7 +21,7 @@ namespace Task
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var item = e.SelectedItem as MasterDetPageMenuItem;
-          
+
             if (item == null)
                 return;
 

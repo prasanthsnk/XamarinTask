@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Task.MasterDetPageDetail"
              Title="Detail">
-  <StackLayout Padding="10">
+    <StackLayout Padding="10">
         <ListView x:Name="lstRegion"
                       ItemsSource="{Binding UserList}"
-                       ItemSelected="OnSelectedItem" >
+                  SelectedItem="{Binding YourSelectedItem, Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace Task.Models
 {
@@ -9,6 +11,9 @@ namespace Task.Models
         public UserModel(string name, string details) {
             this.name = name;
             this.details = details;
+            DeleteClick = new Command(async () => {
+               await App.Current.MainPage.Navigation.PopAsync();
+            });
 
         }
         private string name;
@@ -25,6 +30,6 @@ namespace Task.Models
             get { return details; }
             set { details = value; }
         }
-
+        public ICommand DeleteClick { get; set; }
     }
 }

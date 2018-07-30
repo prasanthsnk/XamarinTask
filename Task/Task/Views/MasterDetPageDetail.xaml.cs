@@ -20,12 +20,12 @@ namespace Task
             userList.Add(new UserModel("Pandi", "Developer"));
             this.BindingContext = new ViewModels.UserViewModel(userList);
         }
-        async System.Threading.Tasks.Task OnSelectedItem(object sender, SelectedItemChangedEventArgs e)
-        {
-            UserModel user = e.SelectedItem as UserModel;
-            var detailPage = new Views.DetailPage();
-            detailPage.BindingContext = user;
-            await Navigation.PushAsync(detailPage);
-        }
+        //async System.Threading.Tasks.Task OnSelectedItem(object sender, SelectedItemChangedEventArgs e)
+        //{
+        //    UserModel user = e.SelectedItem as UserModel;
+        //    var detailPage = new Views.DetailPage();
+        //    detailPage.BindingContext = user;
+        //    await Navigation.PushAsync(detailPage);
+        //}
     }
 }

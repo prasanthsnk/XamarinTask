@@ -38,6 +38,12 @@ namespace Task.ViewModels
             set
             {
                 _yourSelectedItem = value;
+                UserModel user  = value as UserModel;
+                var detailPage = new Views.DetailPage
+                {
+                    BindingContext = user
+                };
+                App.Current.MainPage.Navigation.PushAsync(detailPage);
                 NotifyPropertyChanged("YourSelectedItem");
 
             }

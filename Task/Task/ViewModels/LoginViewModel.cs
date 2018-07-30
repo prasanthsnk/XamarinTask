@@ -15,8 +15,9 @@ namespace Task.ViewModels
         public LoginViewModel()
         {
             LoginClick = new Command(()=>{
-                App.Current.MainPage = new NavigationPage(new MasterDetPage());
-            
+                // App.Current.MainPage = new NavigationPage(new MasterDetPage());
+                App.Current.MainPage.Navigation.PushAsync(new MasterDetPage());
+
             });
         } 
         public string Name
