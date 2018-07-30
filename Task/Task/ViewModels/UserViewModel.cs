@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Task.Models;
 
 namespace Task.ViewModels
 {
@@ -8,12 +9,12 @@ namespace Task.ViewModels
     {
         private List<Models.UserModel> userList;
 
-        public UserViewModel(List<Models.UserModel> userList)
+        public UserViewModel(List<UserModel> userList)
         {
             this.userList = userList;
         }
 
-        public List<Models.UserModel> UserList
+        public List<UserModel> UserList
         {
             get
             {
@@ -23,6 +24,22 @@ namespace Task.ViewModels
             {
                 userList = value;
                 NotifyPropertyChanged("UserList");
+            }
+        }
+
+        UserModel _yourSelectedItem;
+        public UserModel YourSelectedItem
+        {
+            get
+            {
+                return _yourSelectedItem;
+            }
+
+            set
+            {
+                _yourSelectedItem = value;
+                NotifyPropertyChanged("YourSelectedItem");
+
             }
         }
     }
